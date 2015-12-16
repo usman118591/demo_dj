@@ -1,0 +1,162 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AirBNB</title>
+    <link rel="icon" href="{% static "/img/logo.jpg" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href=  {% static "css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "main.css" %}>
+    
+  </head>
+
+  <body>
+    <div class="nav nav-pills">
+
+      <div class="container">
+        <ul class="pull-left">
+
+          <li class="dropdown">
+            <a href="#"data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a>
+<ul class="dropdown-menu">
+  <li><a href="#">My Email</a></li>
+   <li><a href="#">Skype Id</a></li>
+   <li><a href="#">My Phone #</a></li>
+ </ul>
+
+        </li>
+       
+</ul>
+<div class="dropdown">
+  <!--Adding a Dropdown in a Button.You can also see hovering from Jquery. -->
+<button type="button"class="btn btn-primary btn-xs" data-toggle="dropdown"class="btn btn-info dropdown-toggle" id="Ord" aria-haspopup='true' aria-expandable="true">Order Now
+<span class="caret"></span>
+</button>
+<div class="dropdown-menu" aria-labelledby="Ord">
+          <li><a href="signin.html">Sign Up</a></li>
+          <li><a href="signup.html">Login In</a></li>
+          <li role="seperator" class="divider"></li>
+          <li><a href="#">Shared Room</a></li>
+  
+          <li><a href="#">Book Now</a></li>
+</div>
+          
+        
+
+</div>
+        </ul>
+        <ul class="pull-right">
+       <li> <a href="signin.html">Sign Up</a></li>
+          <li><a href="signup.html">Login In</a></li>
+         
+        
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+    
+      <div class="container">
+        <h1>Need a Place?</h1>
+        <p>Live in a Classical Hotels at Berlin.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div> 
+<div class="Neighborhood-guides">
+    <div class="container">
+    <h2>Nighborhood Guides</h2>
+    <p>Not Sure where to stay? We've created neighborhood guides for cities all around the world</p>
+    <div class="row">
+    <div class="col-md-4">
+    <div class="thumbnail">
+    <img src="https://goo.gl/vxFlgy"class="img-circle img-rounded img-responsive centre-block"alt="La-Elso Hotel">
+   </div>
+    
+     <div class="thumbnail">
+    <img src="https://goo.gl/ah3WJ7">
+    </div></div>
+    
+    <div class="col-md-4">
+    <div class="thumbnail">
+    <img src="">
+    </div>
+    <div class="thumbnail">
+    <img src="https://goo.gl/4z2IKv"></div>
+    </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+    <img src="https://goo.gl/aulH3G">
+    </div>
+    </div></div> 
+    <div class="col-xs-6">
+      <!--Adding an Embedded Video -->
+      <div class="embed-resonsive embed-responsive-4by3">
+        <video class="embed-responive-item"src="http://tune.pk/video/1450652/home-to-you-airbnb-welcomes-the-ultimate-traveler-original-version"></video>
+
+
+      </div>
+
+    </div>
+    
+    <div class="learn-more">
+    <div class="container">
+    <div class="row">
+        <div>
+       
+      <h3>What we Offer?</h3>
+      <p>Appartments,Houses flats,cruises wherever you want Hope In.</p>
+      <p><a href="https://www.airbnb.com/">See how to travel on Airbnb</a></p>
+        </div>
+      <div class="col-md-4">
+      
+      <h3>Host</h3>
+      <p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+      <p><a href="#">Learn more about hosting</a></p>
+      </div>
+      <div class="col-md-4">
+      <h3>Trust and Safety</h3>
+      <p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+      <p><a href="#">Learn about trust at Airbnb</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="InputEmail">Email</label>
+    <input type="email" class="form-control" id="input Email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="shit">Password</label>
+    <input type="Password" class="form-control" id="input Email" placeholder="Enter your Password">
+  </div>
+  <a href="#" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-edit"></span> Login</a>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h2 class="panel-title">Dr.Usman Siddiqui</h2>
+  </div>
+  <!--Adding a Panel-->
+<div class="panel-body">
+  <p>Usman is the Programmer,Hacker And Entrepreneur. Wanna ask something?</p>
+<div class="panel-footer">
+&raquo;<a href="#">Make an Appointment</a>
+</div>
+
+<!--Adding a Well-->
+<div class="well">
+  <p>Hey Just cheking out the beta version of Well</p>
+
+</div>
+
+</div>
+  <script src="{% static "js/jquery-2.1.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/myscript.js" %}"></script>
+
+  </body>
+</html>

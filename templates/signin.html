@@ -1,0 +1,101 @@
+{% load staticfiles%}
+{% block content %}
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href={% static "signin.css" %} >
+<src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+ 
+
+
+
+</head> 
+<body>
+
+	<div class="modal"id="mymodal" >
+	<h3 class="modal-header">
+		
+	<h1>
+	We Are Glad you are Here!
+		</h1>
+	</div>
+<div class="modal-body">
+		<div class="container">
+
+      <form class="form-signin"method="GET" action="success.html>
+      {% csrf_token %}
+        <h6 class="form-signin-heading">
+   Please sign In</p>
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-sm btn-primary" type="submit" data-toggle="modal">Sign in <a href="success.html"></button>
+      </form>
+      <a href="{% url socialauth_begin 'github' %}">Login with GitHub</a>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=930428277026741";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+
+{% endblock %}
+	</div>
+		
+
+<div class="modal-footer">
+	<button class="btn" data-dismiss="modal"aria-hidden="true">Close</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+</body></html>
